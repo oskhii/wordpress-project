@@ -1,0 +1,201 @@
+/*
+Theme name: Standings
+Theme author: Oskar Hiismäki
+*/
+* {
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#site-container {
+    max-width: 1920px;
+    margin-right: auto;
+    margin-left: auto;
+    background: url('pitch.PNG');
+}
+#site-header {
+    padding: 10px;
+    text-align: center;
+}
+
+#site-header h1 {
+    color: #80a67e;
+    -webkit-text-stroke: 2px #000000;
+    font-size: 3.5em;
+    margin: 0;
+}
+
+#top-navi {
+    background-color: #80a67e;
+    border: solid 2px #2f2f2f;
+}
+
+#top-navi ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#top-navi ul li {
+    position: relative;
+}
+
+#top-navi > div > ul > li:first-child {
+    display: none;
+}
+
+#top-navi ul li a {
+    text-decoration: none;
+    color: #2f2f2f;
+    font-weight: bold;
+    display: block;
+    padding: 9px 15px;
+    text-align: center;
+}
+
+#top-navi .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    padding-top: 2px;
+}
+
+#top-navi ul li:hover .sub-menu {
+    display: block;
+}
+
+#top-navi .sub-menu li {
+    background-color: #80a67e;
+    display: block;
+    width: 100%;
+}
+
+#top-navi ul li.current-menu-item > a, #top-navi ul li.current-category-parent > a, #top-navi ul li.current-post-ancestor > a {
+    background-color: gold;
+}
+
+#content, #front-page-content, #category-content {
+    display: flex;
+}
+
+#content main {
+    width: 70%;
+    padding: 10px;
+}
+
+#category-content main {
+    width: 100%;
+    padding: 15px;
+}
+
+#content main a, #front-page-content main a, #category-content main a {
+    text-decoration: none;
+    color: #2f2f2f;
+    font-weight: bold;
+}
+
+#content h1, #content h2 {
+    background-color: #80a67e;
+    color: #2f2f2f;
+    padding: 10px;
+    border-radius: 1%;
+}
+
+#content main article section {
+    width: 100%;
+}
+
+#content main h1 a, #content main h2 a, #front-page-content main h1 a, #front-page-content main h2 a, #category-content main h1 a, #category-content main h2 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#content #content-box, #front-page-content #front-page-content-box, #category-content #category-content-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content, #front-page-content, #category-content {
+    background-color: rgba(128, 166, 126, 0.33);
+    margin: 10px;
+    border-radius: 1%;
+}
+
+#content #content-box .box-content, #front-page-content #front-page-content-box .box-content, #category-content #category-content-box .box-content {
+    width: 33.33%;
+    padding: 10px;
+}
+
+#activity-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#activity-box section {
+    width: 33.33%;
+    padding-right: 10px;
+}
+
+.sidebar {
+    width: 30%;
+    padding: 10px;
+}
+
+#content .sidebar h1, #content .sidebar h2 {
+    background-color: #80a67e;
+    color: #2f2f2f;
+    padding: 10px;
+}
+
+#site-footer {
+    background-color: #80a67e;
+    padding: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1826px) {
+    #content #content-box .box-content, #front-page-content #front-page-content-box .box-content, #category-content #category-content-box .box-content {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1244px) {
+    #content #content-box {
+        display: block;
+    }
+    #content #content-box .box-content, #front-page-content #front-page-content-box .box-content, #category-content #category-content-box .box-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 881px) {
+    #content, #front-page-content, #category-content {
+        display: block;
+    }
+    #content main, #front-page-content main, #category-content main {
+        width: 100%;
+    }
+    #content #sidebar {
+        width: 100%;
+    }
+    #top-navi ul {
+        display: block;
+    }
+    #top-navi .sub-menu {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 0.8em;
+    }
+    #top-navi > div > ul > li:first-child {
+        display: block;
+    }
+    #top-navi > div > ul > li:not(:first-child) {
+        display: none;
+    }
+}

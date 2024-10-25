@@ -1,0 +1,14 @@
+.standings, .standings * {
+    box-sizing: border-box;
+} 
+
+.standings {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.standings .standings-title h3, .wp-widget-standings .standings-title h3 {
+    margin-top: 0;
+}
